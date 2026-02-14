@@ -3,10 +3,17 @@ import 'package:responsive_dash_board/models/drawer_item_model.dart';
 import 'package:responsive_dash_board/utils/app_images.dart';
 import 'package:responsive_dash_board/widget/drawer_item.dart';
 
-class DrawerItemListView extends StatelessWidget {
+class DrawerItemListView extends StatefulWidget {
   const DrawerItemListView({super.key});
 
-  static const List<DrawerItemModel> items = [
+  @override
+  State<DrawerItemListView> createState() => _DrawerItemListViewState();
+}
+
+class _DrawerItemListViewState extends State<DrawerItemListView> {
+  int activeIndex = 0;
+
+  final List<DrawerItemModel> items = [
     DrawerItemModel(title: 'Dashboard', image: Assets.imagesDashboard),
     DrawerItemModel(title: 'My Transaction', image: Assets.imagesMyTransctions),
     DrawerItemModel(title: 'Statistics', image: Assets.imagesStatistics),
@@ -21,9 +28,21 @@ class DrawerItemListView extends StatelessWidget {
       physics: NeverScrollableScrollPhysics(),
       itemCount: items.length,
       itemBuilder: (context, index) {
-        return Padding(
-          padding: const EdgeInsets.only(top: 20),
-          child: DrawerItem(drawerItem: items[index]),
+        return GestureDetector(
+          onTap: () {
+            if (activeIndex != index) {
+              setState(() {
+                activeIndex = index;
+              });
+            }
+          },
+          child: Padding(
+            padding: const EdgeInsets.only(top: 20),
+            child: DrawerItem(
+              drawerItem: items[index],
+              isActiveIndex: activeIndex == index,
+            ),
+          ),
         );
       },
     );

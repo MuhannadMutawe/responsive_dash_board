@@ -5,9 +5,11 @@ class AllExpensessItemHeader extends StatelessWidget {
   const AllExpensessItemHeader({
     super.key,
     required this.iconImage,
+    this.isSelected = false,
   });
 
   final String iconImage;
+  final bool isSelected;
 
   @override
   Widget build(BuildContext context) {
@@ -18,17 +20,26 @@ class AllExpensessItemHeader extends StatelessWidget {
           height: 60,
           padding: EdgeInsets.all(14),
           decoration: ShapeDecoration(
-            color: Color(0xFFFAFAFA),
+            color: isSelected
+                ? Colors.white.withOpacity(0.10000000149011612)
+                : Color(0xFFFAFAFA),
             shape: OvalBorder(),
           ),
-          child: Center(child: SvgPicture.asset(iconImage)),
+          child: Center(
+            child: SvgPicture.asset(
+              iconImage,
+              colorFilter: isSelected
+                  ? ColorFilter.mode(Colors.white, BlendMode.srcIn)
+                  : null,
+            ),
+          ),
         ),
         Spacer(),
         Transform.rotate(
           angle: -1.57079633 * 2,
           child: Icon(
             Icons.arrow_back_ios_new,
-            color: Color(0xff064061),
+            color: isSelected ? Colors.white : Color(0xff064061),
           ),
         ),
       ],

@@ -1,10 +1,46 @@
 import 'package:flutter/material.dart';
+import 'package:responsive_dash_board/models/user_info_model.dart';
+import 'package:responsive_dash_board/utils/app_images.dart';
+import 'package:responsive_dash_board/widget/user_info_list_tile.dart';
 
 class LatestTransctionListView extends StatelessWidget {
   const LatestTransctionListView({super.key});
 
+  static const items = [
+    UserInfoModel(
+      image: Assets.imagesAvatar1,
+      title: 'Madrani Andi',
+      subtitle: 'Madraniadi20@gmail',
+    ),
+    UserInfoModel(
+      image: Assets.imagesAvatar2,
+      title: 'Josua Nunito',
+      subtitle: 'Josh Nunito@gmail.com',
+    ),
+    UserInfoModel(
+      image: Assets.imagesAvatar3,
+      title: 'Madrani Andi',
+      subtitle: 'Madraniadi20@gmail',
+    ),
+    UserInfoModel(
+      image: Assets.imagesAvatar1,
+      title: 'Madrani Andi',
+      subtitle: 'Madraniadi20@gmail',
+    ),
+  ];
+
   @override
   Widget build(BuildContext context) {
-    return ListView();
+    return ListView.builder(
+      itemCount: items.length,
+      scrollDirection: Axis.horizontal,
+      itemBuilder: (context, index) {
+        return IntrinsicWidth(
+          child: UserInfoListTile(
+            userInfoModel: items[index],
+          ),
+        );
+      },
+    );
   }
 }

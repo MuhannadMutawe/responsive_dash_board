@@ -21,6 +21,7 @@ class AllExpensessItemHeader extends StatelessWidget {
           padding: EdgeInsets.all(14),
           decoration: ShapeDecoration(
             color: isSelected
+                // ignore: deprecated_member_use
                 ? Colors.white.withOpacity(0.10000000149011612)
                 : Color(0xFFFAFAFA),
             shape: OvalBorder(),

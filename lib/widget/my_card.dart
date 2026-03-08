@@ -13,6 +13,7 @@ class MyCard extends StatelessWidget {
       child: Container(
         decoration: ShapeDecoration(
           image: DecorationImage(
+            fit: BoxFit.fill,
             image: AssetImage(Assets.imagesCardBackground),
           ),
           color: const Color(0xFF4EB7F2),
@@ -35,11 +36,29 @@ class MyCard extends StatelessWidget {
               ),
               trailing: SvgPicture.asset(Assets.imagesGallery),
             ),
-            Spacer(),
-            Text('0918 8124 0042 8129 ', style: AppStyles.styleSemiBold24),
-            Text(
-              '12/20 - 124',
-              style: AppStyles.styleSemiBold16.copyWith(color: Colors.white),
+            Expanded(
+              child: SizedBox(),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(right: 24),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Text(
+                    '0918 8124 0042 8129 ',
+                    style: AppStyles.styleSemiBold24,
+                  ),
+                  Text(
+                    '12/20 - 124',
+                    style: AppStyles.styleRegular16.copyWith(
+                      color: Colors.white,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 26,
             ),
           ],
         ),

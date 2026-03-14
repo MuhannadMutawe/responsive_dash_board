@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/widget/all_expensess_and_quick_invoice_secion.dart';
 import 'package:responsive_dash_board/widget/custom_background_container.dart';
 import 'package:responsive_dash_board/widget/custom_drawer.dart';
+import 'package:responsive_dash_board/widget/income_section.dart';
 import 'package:responsive_dash_board/widget/my_card_section.dart';
 import 'package:responsive_dash_board/widget/trasnction_history_section.dart';
 
@@ -37,6 +38,10 @@ class DashboardDesktopLayout extends StatelessWidget {
                     color: Color(0XFFF1F1F1),
                   ),
                   TrasnctionHistorySection(),
+                  SizedBox(
+                    height: 16,
+                  ),
+                  IncomeSection(),
                 ],
               ),
             ),

@@ -29,21 +29,27 @@ class DashboardDesktopLayout extends StatelessWidget {
         Expanded(
           child: Padding(
             padding: const EdgeInsets.only(top: 40.0),
-            child: CustomBackgroundContainer(
-              child: Column(
-                children: [
-                  MyCardSection(),
-                  Divider(
-                    height: 24,
-                    color: Color(0XFFF1F1F1),
+            child: Column(
+              children: [
+                CustomBackgroundContainer(
+                  child: Column(
+                    children: [
+                      MyCardSection(),
+                      Divider(
+                        height: 24,
+                        color: Color(0XFFF1F1F1),
+                      ),
+                      TrasnctionHistorySection(),
+                    ],
                   ),
-                  TrasnctionHistorySection(),
-                  SizedBox(
-                    height: 16,
-                  ),
-                  IncomeSection(),
-                ],
-              ),
+                ),
+                SizedBox(
+                  height: 24,
+                ),
+                Expanded(
+                  child: IncomeSection(),
+                ),
+              ],
             ),
           ),
         ),

@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/widget/all_expensess_and_quick_invoice_secion.dart';
-import 'package:responsive_dash_board/widget/custom_background_container.dart';
 import 'package:responsive_dash_board/widget/custom_drawer.dart';
 import 'package:responsive_dash_board/widget/income_section.dart';
-import 'package:responsive_dash_board/widget/my_card_section.dart';
-import 'package:responsive_dash_board/widget/trasnction_history_section.dart';
+import 'package:responsive_dash_board/widget/my_cards_and_transction_history_section.dart';
 
 class DashboardDesktopLayout extends StatelessWidget {
   const DashboardDesktopLayout({super.key});
@@ -31,18 +29,7 @@ class DashboardDesktopLayout extends StatelessWidget {
             padding: const EdgeInsets.only(top: 40.0),
             child: Column(
               children: [
-                CustomBackgroundContainer(
-                  child: Column(
-                    children: [
-                      MyCardSection(),
-                      Divider(
-                        height: 24,
-                        color: Color(0XFFF1F1F1),
-                      ),
-                      TrasnctionHistorySection(),
-                    ],
-                  ),
-                ),
+                MyCardsAndTransctionHistorySection(),
                 SizedBox(
                   height: 24,
                 ),

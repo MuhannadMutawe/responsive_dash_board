@@ -50,6 +50,7 @@ class ItemDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      horizontalTitleGap: 4,
       leading: CircleAvatar(
         radius: 6,
         backgroundColor: itemDetailsModel.color,
@@ -58,7 +59,7 @@ class ItemDetails extends StatelessWidget {
         itemDetailsModel.title,
         style: AppStyles.styleRegular16,
       ),
-      subtitle: Text(
+      trailing: Text(
         itemDetailsModel.value,
         style: AppStyles.styleMedium16,
       ),

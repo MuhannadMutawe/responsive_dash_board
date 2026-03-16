@@ -51,6 +51,7 @@ class ItemDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       horizontalTitleGap: 4,
+      contentPadding: EdgeInsets.zero,
       leading: CircleAvatar(
         radius: 6,
         backgroundColor: itemDetailsModel.color,

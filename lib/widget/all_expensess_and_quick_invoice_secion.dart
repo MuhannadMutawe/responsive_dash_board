@@ -9,19 +9,17 @@ class AllExpensessAndQuickInvoiceSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: Column(
-        children: [
-          AllExpensess(),
-          SizedBox(
-            height: 25,
-          ),
-          QuickInvoice(),
-          SizedBox(
-            height: 40,
-          ),
-        ],
-      ),
+    return Column(
+      children: [
+        AllExpensess(),
+        SizedBox(
+          height: 25,
+        ),
+        QuickInvoice(),
+        SizedBox(
+          height: 40,
+        ),
+      ],
     );
   }
 }

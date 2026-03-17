@@ -18,29 +18,43 @@ class DashboardDesktopLayout extends StatelessWidget {
           width: 32,
         ),
         Expanded(
-          flex: 2,
-          child: Padding(
-            padding: const EdgeInsets.only(top: 40.0),
-            child: AllExpensessAndQuickInvoiceSection(),
-          ),
-        ),
-        SizedBox(
-          width: 24,
-        ),
-        Expanded(
-          child: Padding(
-            padding: const EdgeInsets.only(top: 40.0),
-            child: Column(
-              children: [
-                MyCardsAndTransctionHistorySection(),
-                SizedBox(
-                  height: 24,
+          flex: 3,
+          child: CustomScrollView(
+            slivers: [
+              SliverFillRemaining(
+                hasScrollBody: false,
+                child: Row(
+                  children: [
+                    Expanded(
+                      flex: 2,
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 40.0),
+                        child: AllExpensessAndQuickInvoiceSection(),
+                      ),
+                    ),
+                    SizedBox(
+                      width: 24,
+                    ),
+                    Expanded(
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 40.0),
+                        child: Column(
+                          children: [
+                            MyCardsAndTransctionHistorySection(),
+                            SizedBox(
+                              height: 24,
+                            ),
+                            Expanded(
+                              child: IncomeSection(),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
-                Expanded(
-                  child: IncomeSection(),
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
         ),
         SizedBox(

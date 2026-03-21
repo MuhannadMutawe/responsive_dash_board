@@ -32,21 +32,21 @@ class UnselectedExpensessItem extends StatelessWidget {
           ),
           Text(
             itemModel.title,
-            style: AppStyles.styleMedium16,
+            style: AppStyles.styleMedium16(context),
           ),
           SizedBox(
             height: 8,
           ),
           Text(
             itemModel.date,
-            style: AppStyles.styleRegular14,
+            style: AppStyles.styleRegular14(context),
           ),
           SizedBox(
             height: 16,
           ),
           Text(
             itemModel.price,
-            style: AppStyles.styleSemiBold24,
+            style: AppStyles.styleSemiBold24(context),
           ),
         ],
       ),
@@ -84,21 +84,27 @@ class SelectedExpensessItem extends StatelessWidget {
           ),
           Text(
             itemModel.title,
-            style: AppStyles.styleMedium16.copyWith(color: Colors.white),
+            style: AppStyles.styleMedium16(
+              context,
+            ).copyWith(color: Colors.white),
           ),
           SizedBox(
             height: 8,
           ),
           Text(
             itemModel.date,
-            style: AppStyles.styleRegular14.copyWith(color: Color(0xFFFAFAFA)),
+            style: AppStyles.styleRegular14(
+              context,
+            ).copyWith(color: Color(0xFFFAFAFA)),
           ),
           SizedBox(
             height: 16,
           ),
           Text(
             itemModel.price,
-            style: AppStyles.styleSemiBold24.copyWith(color: Colors.white),
+            style: AppStyles.styleSemiBold24(
+              context,
+            ).copyWith(color: Colors.white),
           ),
         ],
       ),

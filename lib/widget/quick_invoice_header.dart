@@ -12,7 +12,7 @@ class QuickInvioceHeader extends StatelessWidget {
       children: [
         Text(
           'Quick Invioc',
-          style: AppStyles.styleSemiBold20,
+          style: AppStyles.styleSemiBold20(context),
         ),
         Spacer(),
         Container(

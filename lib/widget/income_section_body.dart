@@ -23,7 +23,6 @@ class IncomeSectionBody extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Expanded(
-                flex: 1,
                 child: IncomeChar(),
               ),
               SizedBox(

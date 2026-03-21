@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_dash_board/models/item_details_model.dart';
-import 'package:responsive_dash_board/utils/app_styles.dart';
+import 'package:responsive_dash_board/widget/item_details.dart';
 
 class IncomeDetails extends StatelessWidget {
   const IncomeDetails({super.key});
@@ -31,40 +31,12 @@ class IncomeDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.center,
       children: items
           .map(
             (item) => ItemDetails(itemDetailsModel: item),
           )
           .toList(),
-    );
-  }
-}
-
-class ItemDetails extends StatelessWidget {
-  const ItemDetails({
-    super.key,
-    required this.itemDetailsModel,
-  });
-
-  final ItemDetailsModel itemDetailsModel;
-
-  @override
-  Widget build(BuildContext context) {
-    return ListTile(
-      horizontalTitleGap: 4,
-      contentPadding: EdgeInsets.zero,
-      leading: CircleAvatar(
-        radius: 6,
-        backgroundColor: itemDetailsModel.color,
-      ),
-      title: Text(
-        itemDetailsModel.title,
-        style: AppStyles.styleRegular16(context),
-      ),
-      trailing: Text(
-        itemDetailsModel.value,
-        style: AppStyles.styleMedium16(context),
-      ),
     );
   }
 }

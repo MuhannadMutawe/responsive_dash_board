@@ -17,12 +17,15 @@ This project demonstrates how to build scalable UI layouts that adapt seamlessly
 
 ## 📂 Project Structure
 
+```
 lib/
-│── models/ # Data models
-│── views/ # UI screens
-│── widgets/ # Reusable components
-│── utils/ # Helper functions
-│── main.dart # Entry point
+│── models/    # Data models
+│── views/     # UI screens
+│── widgets/   # Reusable components
+│── utils/     # Helper functions
+│
+└── main.dart  # Entry point
+```
 
 ---
 

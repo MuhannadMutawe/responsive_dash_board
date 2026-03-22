@@ -32,6 +32,7 @@ class IncomeDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: items
           .map(
             (item) => ItemDetails(itemDetailsModel: item),

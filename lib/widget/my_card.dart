@@ -25,7 +25,7 @@ class MyCard extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.end,
           children: [
             ListTile(
-              contentPadding: EdgeInsets.only(right: 42, left: 31, top: 16),
+              contentPadding: EdgeInsets.only(right: 42, left: 31, top: 12),
               title: Text(
                 'Name card',
                 style: AppStyles.styleRegular16(
@@ -63,7 +63,7 @@ class MyCard extends StatelessWidget {
             ),
             Flexible(
               child: SizedBox(
-                height: 16,
+                height: 12,
               ),
             ),
           ],

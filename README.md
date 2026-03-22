@@ -57,8 +57,11 @@ flutter run
 
 ## 📸 Screenshots
 
-Add your screenshots inside:
-assets/screenshots/
+<p align="center">
+  <img src="assets/screenshots/mobile.png" width="240 " />
+  <img src="assets/screenshots/tablet.png" width="35%" />
+  <img src="assets/screenshots/laptop.png"  height = "400" />
+</p>
 
 ---
 
